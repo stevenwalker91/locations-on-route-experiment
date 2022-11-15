@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Using Leaflet and Turf.js</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="main.js"></script>
+        
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+    </head>
+<body>
+    <div>
+        <p>Purpose of this experiment is to explore how I can take a Strava route and check this against a list of locations e.g. hills, cafes etc to see which locations were visited on the route. </p>
+        <ul>
+            <li>Black dots represent potentially thousands of location records in the database
+            </li>
+            <li>Red dots represent locations that are within the bounding box of the route - when querying the database we would filter so that only these locations that are within the bounding box will be compared against the route</li>
+            <li>Green dots indicate dots that have been matched to the route (noting that we also apply a buffer to account for gps inaccuracy)</li>
+        </ul>
+    </div>
+    <div id="map">
+    </div>
+
+</body>
+</html>

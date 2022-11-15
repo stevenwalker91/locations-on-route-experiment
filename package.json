@@ -1,0 +1,38 @@
+{
+  "name": "locations-on-route-experiment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woftis/locations-on-route-experiment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woftis/locations-on-route-experiment/issues"
+  },
+  "homepage": "https://github.com/woftis/locations-on-route-experiment#readme",
+  "devDependencies": {
+    "css-loader": "6.7.2",
+    "style-loader": "3.3.1",
+    "webpack": "5.75.0",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "4.11.1"
+  },
+  "dependencies": {
+    "@googlemaps/polyline-codec": "1.0.28",
+    "@turf/buffer": "6.5.0",
+    "@turf/center": "6.5.0",
+    "@turf/flip": "6.5.0",
+    "@turf/helpers": "6.5.0",
+    "@turf/point-to-line-distance": "6.5.0",
+    "@turf/turf": "6.5.0",
+    "ol": "7.1.0"
+  }
+}
