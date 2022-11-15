@@ -3,6 +3,10 @@
 # Summary
 This is a brief experiment to explore how I could take a GPX route as an input, and compare that route against some pre-defined locations to check if the route covers them. For example, perhaps you want to check what cafes will appear along your cycle.
 
+## See it live 
+
+[Demo](https://woftis.github.io/locations-on-route-experiment/)
+
 ## How it works
 In essence I have pulled out an activity from the Strava API and taken the route details which is a poly line. This line then gets decoded into an array of coordinates. 
 
