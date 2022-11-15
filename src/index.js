@@ -32,7 +32,8 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //add the route to the map using geoJSON
 //if providing to the user, this would show myRouteLineString - but for testing we want to see the buffered route
-L.geoJSON(myRouteLineString).addTo(map);
+L.geoJSON(myRouteLineString, {color: 'red'}).addTo(map);
+L.geoJSON(buffered, {color: 'blue'}).addTo(map);
 
 //this stuff here is just for convenience to quickly grab coords for testing
 var popup = L.popup();
