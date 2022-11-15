@@ -5,7 +5,7 @@ This is a brief experiment to explore how I could take a GPX route as an input, 
 
 ## See it live 
 
-[Demo](https://woftis.github.io/locations-on-route-experiment/)
+For more context on the description below, you should consider [checking out the demo](https://woftis.github.io/locations-on-route-experiment/) which will show how the route gets plotted and buffered, and then how locations gets mathed against it.
 
 ## How it works
 In essence I have pulled out an activity from the Strava API and taken the route details which is a poly line. This line then gets decoded into an array of coordinates. 
