@@ -26,3 +26,5 @@ Given this is just an experiment, the code is very rough, not modularised or org
 ## Next Steps
 
 This was purely an experiment but further down the line, I intend to use the learnings for this on a personal project where I will fully integrate with Strava and allow users to track places visited.
+
+I also neeed to further explore geospatial databases, how these works and whether they could perhaps further reduce computation required. For example, rather than querying every point in the bounding box with javascript, could I perhaps pass in a polygon of the buffered route to the database, thereby only returning matching locations and removing the need to check the locations on the client side? 
