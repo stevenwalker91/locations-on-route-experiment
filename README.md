@@ -10,11 +10,11 @@ For more context on the description below, you should consider [checking out the
 ## How it works
 In essence I have pulled out an activity from the Strava API and taken the route details which is a poly line. This line then gets decoded into an array of coordinates. 
 
-We create a GeoJSON linestring from the coords and then add a buffer to it. The buffer essentially expands the route by a pre-defined number of metres to account for GPS inaccuracy and someone not neccesarily being on the exact same GPS position. 
+We create a GeoJSON linestring from the coords and then add a buffer to it. The buffer essentially expands the route by a pre-defined number of metres to account for GPS inaccuracy and also to account for how precise GPS is. 
 
-The route then gets applied to the map and we create a buffer box around it. The buffer box gets used to filter the list of locations - e.g. rather than taking potentially thousands of locations from a DB and computing them, we can only return coordinates that are within the bounding box, reducing the need for additional computation.
+The route then gets applied to the map and we create a bounding box around it. The bounding box gets used to filter the list of locations - e.g. rather than taking potentially thousands of locations from a DB and computing them, we can only return coordinates that are within the bounding box, reducing the need for additional computation.
 
-Given this is an experiment, there is no db connection. I have a sring of some pre-defined locations, and for the purpose of testing at scale there is a function that will create random additional locations anywhere on the visible map. This let me very quickly see how it handled comparing tens of thousands of locations.
+Given this is an experiment, there is no db connection. I have a string of some pre-defined locations, and for the purpose of testing at scale there is a function that will create random additional locations anywhere on the visible map. This let me very quickly see how it handled comparing tens of thousands of locations.
 
 Once we have a list of locations within the bounding box, we use TurfJS `booleanIntersects` function on each location to check if it intersects with the route. 
 
